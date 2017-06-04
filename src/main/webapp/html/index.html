@@ -11,7 +11,7 @@
 <body>
 <header class="navbar-wrapper">
 	<div class="navbar navbar-fixed-top">
-		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="#">learning resources</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
+		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="#">framework</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
 			<span class="logo navbar-slogan f-l mr-10 hidden-xs">1.0</span>
 			<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
 			<nav class="nav navbar-nav">
@@ -46,33 +46,27 @@
 </header>
 <aside class="Hui-aside">
 	<div class="menu_dropdown bk_2">
-		<dl id="menu-user" style='display:none;'>
+		<dl>
 			<dt><i class="Hui-iconfont">&#xe620;</i> 业务管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="./business/telphone-list.html?type=3" data-title="电话预约" href="javascript:void(0)">电话预约</a></li>
-					<li><a data-href="user-list.html?type=1" data-title="冷藏等登记" href="javascript:void(0)">冷藏等登记</a></li>
-					<li><a data-href="user-list.html?type=2" data-title="遗体整理" href="javascript:void(0)">遗体整理</a></li>
-					<li><a data-href="user-list.html?type=2" data-title="悼念厅" href="javascript:void(0)">悼念厅</a></li>
-					<li><a data-href="user-list.html?type=2" data-title="收费" href="javascript:void(0)">收费</a></li>
-					<li><a data-href="user-list.html?type=2" data-title="火化" href="javascript:void(0)">火化</a></li>
-					<!-- 	<li><a data-href="./user/user-list.html?type=3" data-title="用户管理" href="javascript:void(0)">用户管理</a></li> -->
+					<li><a data-href="./business/telphone-list.html?type=1" data-title="电话预约" href="javascript:void(0)">电话预约</a></li>
+					<li><a data-href="./business/telphone-list.html?type=2" data-title="冷藏等登记" href="javascript:void(0)">冷藏等登记</a></li>
+					<li><a data-href="./business/telphone-list.html?type=3" data-title="遗体整理" href="javascript:void(0)">遗体整理</a></li>
+					<li><a data-href="./business/telphone-list.html?type=4" data-title="悼念厅" href="javascript:void(0)">悼念厅</a></li>
+					<li><a data-href="./business/telphone-list.html?type=5" data-title="收费" href="javascript:void(0)">收费</a></li>
+					<li><a data-href="./business/telphone-list.html?type=6" data-title="火化" href="javascript:void(0)">火化</a></li>
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-resource" style='display:none;'>
+		<dl>
 			<dt><i class="Hui-iconfont">&#xe63e;</i> 骨灰寄存<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="study-link-list.html" data-title="学习资源管理" href="javascript:void(0)">学习资源管理</a></li>
-					<li><a data-href="resources-list.html?type=1" data-title="项目部署管理" href="javascript:void(0)">项目部署管理</a></li>
-					<li><a data-href="resources-list.html?type=2" data-title="实践任务管理" href="javascript:void(0)">实践任务管理</a></li>
-					<li><a data-href="test-list.html" data-title="测试管理" href="javascript:void(0)">测试管理</a></li>
-					<li><a data-href="weights.html" data-title="分数权重管理" href="javascript:void(0)">分数权重管理</a></li>
-				</ul>
+					<li><a data-href="./ashes_registration/list.html" data-title="骨灰登记" href="javascript:void(0)">骨灰登记</a></li>
 			</dd>
 		</dl>
-		<dl id="menu-score" style='display:none;'>
+		<dl>
 			<dt><i class="Hui-iconfont">&#xe602;</i> 基础数据<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -88,7 +82,7 @@
 					<li><a data-href="./supplier/list.html" data-title="供货商管理" href="javascript:void(0)">供货商管理</a></li>
 					<li><a data-href="./ashes_settlement/list.html" data-title="骨灰安葬处管理" href="javascript:void(0)">骨灰安葬处管理</a></li>
 					<li><a data-href="./registration/list.html" data-title="物品登记" href="javascript:void(0)">物品登记</a></li>
-					<li><a data-href="./agent/list.html" data-title="代办员" href="javascript:void(0)">代办员</a></li>
+					<!--<li><a data-href="./agent/list.html" data-title="代办员" href="javascript:void(0)">代办员</a></li>-->
 				</ul>
 			</dd>
 		</dl>
@@ -97,18 +91,16 @@
 			<dd>
 				<ul>
 					<li><a data-href="./invoice/list.html" data-title="发票管理" href="javascript:void(0)">发票管理</a></li>
-					<li><a data-href="resources-learning.html?type=1" data-title="项目部署管理" href="javascript:void(0)">项目部署学习</a></li>
-					<li><a data-href="resources-learning.html?type=2" data-title="实践任务管理" href="javascript:void(0)">实践任务学习</a></li>
-					<li><a data-href="test-learning.html" data-title="测试管理" href="javascript:void(0)">测试</a></li>
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-info" style='display:none;'>
+		<dl>
 			<dt><i class="Hui-iconfont">&#xe62c;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="user-modify.html?type=info" data-title="个人信息管理" href="javascript:void(0)">修改个人信息</a></li>
-					<li><a data-href="change-password.html" data-title="修改密码" href="javascript:void(0)">修改密码</a></li>
+					<li id="userManage" style="display: none;"><a data-href="user/list.html" data-title="用户列表" href="javascript:void(0)">用户列表</a></li>
+					<li><a data-href="user/modify.html?type=mine" data-title="个人信息管理" href="javascript:void(0)">修改个人信息</a></li>
+					<li><a data-href="user/change-password.html" data-title="修改密码" href="javascript:void(0)">修改密码</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -148,24 +140,14 @@
 $(function(){
 	// 根据不同角色加载不同菜单
 	setTimeout(function(){
-		if(user.type === 1) {
-			$('#menu-resource-student').show();
-			$('#menu-score-student').show();
-			$('#menu-info').show();
-		} else if (user.type === 2) {
-			$('#menu-resource').show();
-			$('#menu-score').show();
-			$('#menu-info').show();
-		} else {
-			$('#menu-user').show();
-			$('#menu-resource').show();
-			$('#menu-score').show();
-			$('#menu-info').show();
+		if(user.type === 2) {
+		    // 管理员
+			$('#userManage').show();
 		}
 	}, 200);
 });
 /*个人信息*/
 function myselfinfo(){
-	layer_show('查看信息','userInfo.html','500','400');
+	layer_show('查看信息','user/userInfo.html','500','400');
 }
 </script>

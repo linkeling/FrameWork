@@ -4,12 +4,12 @@
   <resultMap id="BaseResultMap" type="com.team.dto.Business">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="number" jdbcType="INTEGER" property="number" />
-    <result column="telephone" jdbcType="INTEGER" property="telephone" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
     <result column="dead_id" jdbcType="INTEGER" property="deadId" />
     <result column="dead_name" jdbcType="VARCHAR" property="deadName" />
     <result column="pick_up_time" jdbcType="DATE" property="pickUpTime" />
     <result column="pick_up_address" jdbcType="VARCHAR" property="pickUpAddress" />
-    <result column="car_id" jdbcType="INTEGER" property="carId" />
+    <result column="car_id" jdbcType="VARCHAR" property="carId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="refrigerated_id" jdbcType="INTEGER" property="refrigeratedId" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
@@ -44,9 +44,9 @@
       cremation_furnace_id, charge, note, 
       type, create_time, flapper
       )
-    values (#{id,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, #{telephone,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{number,jdbcType=INTEGER}, #{telephone,jdbcType=VARCHAR},
       #{deadId,jdbcType=INTEGER}, #{deadName,jdbcType=VARCHAR}, #{pickUpTime,jdbcType=DATE}, 
-      #{pickUpAddress,jdbcType=VARCHAR}, #{carId,jdbcType=INTEGER}, #{driverId,jdbcType=INTEGER}, 
+      #{pickUpAddress,jdbcType=VARCHAR}, #{carId,jdbcType=VARCHAR}, #{driverId,jdbcType=INTEGER},
       #{refrigeratedId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{farewellHallId,jdbcType=INTEGER}, 
       #{cremationFurnaceId,jdbcType=INTEGER}, #{charge,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
       #{type,jdbcType=INTEGER}, #{createTime,jdbcType=DATE}, #{flapper,jdbcType=VARCHAR}
@@ -118,7 +118,7 @@
         #{number,jdbcType=INTEGER},
       </if>
       <if test="telephone != null">
-        #{telephone,jdbcType=INTEGER},
+        #{telephone,jdbcType=VARCHAR},
       </if>
       <if test="deadId != null">
         #{deadId,jdbcType=INTEGER},
@@ -133,7 +133,7 @@
         #{pickUpAddress,jdbcType=VARCHAR},
       </if>
       <if test="carId != null">
-        #{carId,jdbcType=INTEGER},
+        #{carId,jdbcType=VARCHAR},
       </if>
       <if test="driverId != null">
         #{driverId,jdbcType=INTEGER},
@@ -174,7 +174,7 @@
         number = #{number,jdbcType=INTEGER},
       </if>
       <if test="telephone != null">
-        telephone = #{telephone,jdbcType=INTEGER},
+        telephone = #{telephone,jdbcType=VARCHAR},
       </if>
       <if test="deadId != null">
         dead_id = #{deadId,jdbcType=INTEGER},
@@ -189,7 +189,7 @@
         pick_up_address = #{pickUpAddress,jdbcType=VARCHAR},
       </if>
       <if test="carId != null">
-        car_id = #{carId,jdbcType=INTEGER},
+        car_id = #{carId,jdbcType=VARCHAR},
       </if>
       <if test="driverId != null">
         driver_id = #{driverId,jdbcType=INTEGER},
@@ -227,12 +227,12 @@
   <update id="updateByPrimaryKey" parameterType="com.team.dto.Business">
     update business
     set number = #{number,jdbcType=INTEGER},
-      telephone = #{telephone,jdbcType=INTEGER},
+      telephone = #{telephone,jdbcType=VARCHAR},
       dead_id = #{deadId,jdbcType=INTEGER},
       dead_name = #{deadName,jdbcType=VARCHAR},
       pick_up_time = #{pickUpTime,jdbcType=DATE},
       pick_up_address = #{pickUpAddress,jdbcType=VARCHAR},
-      car_id = #{carId,jdbcType=INTEGER},
+      car_id = #{carId,jdbcType=VARCHAR},
       driver_id = #{driverId,jdbcType=INTEGER},
       refrigerated_id = #{refrigeratedId,jdbcType=INTEGER},
       user_id = #{userId,jdbcType=INTEGER},
@@ -246,9 +246,10 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from business
+    where type = #{type,jdbcType=INTEGER}
   </select>
 </mapper>

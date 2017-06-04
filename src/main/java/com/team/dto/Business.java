@@ -7,7 +7,7 @@ public class Business {
 
     private Integer number;
 
-    private Integer telephone;
+    private String telephone;
 
     private Integer deadId;
 
@@ -17,7 +17,7 @@ public class Business {
 
     private String pickUpAddress;
 
-    private Integer carId;
+    private String carId;
 
     private Integer driverId;
 
@@ -55,11 +55,11 @@ public class Business {
         this.number = number;
     }
 
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 
@@ -95,11 +95,11 @@ public class Business {
         this.pickUpAddress = pickUpAddress == null ? null : pickUpAddress.trim();
     }
 
-    public Integer getCarId() {
+    public String getCarId() {
         return carId;
     }
 
-    public void setCarId(Integer carId) {
+    public void setCarId(String carId) {
         this.carId = carId;
     }
 
